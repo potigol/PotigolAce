@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<title>ACE in Action</title>
+<style type="text/css" media="screen">
+    #editor {
+        height: 25ex; /* 10 linhas */
+        width: 80em;
+        font-size: 14pt;
+    }
+</style>
+</head>
+<body>
+<div><h1>Potigol</h1>
+<div id="editor">escreva "Jogo Maior Menor"
+escreva "Pense em um número entre 1 e 100."
+var menor := 1
+var maior := 100
+escreva "O número é maior, menor ou igual a 50?"
+var resposta := leia_texto
+enquanto resposta &lt;&gt; "igual" faça
+  metade = (maior + menor) div 2
+  se resposta == "maior" então
+    menor := metade
+  senãose resposta == "menor" então
+    maior := metade
+  senão
+    escreva "Não entendi."
+  fim
+  escreva "O número é maior, menor ou igual a {(maior + menor) div 2}?"
+  resposta := leia_texto
+fim
+escreva "Consegui!"</div>
+</div>
+<script src="/src-min/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+  //  editor.setTheme("ace/theme/monokai");
+    editor.getSession().setMode("ace/mode/potigol");
+    editor.setShowPrintMargin(true);
+</script>
+</body>
+</html>
