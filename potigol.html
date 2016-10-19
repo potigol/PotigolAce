@@ -5,7 +5,7 @@
 <title>ACE in Action</title>
 <style type="text/css" media="screen">
     #editor {
-        height: 25ex; /* 10 linhas */
+     //   height: 25ex; /* 10 linhas */
         width: 80em;
         font-size: 14pt;
     }
@@ -38,7 +38,8 @@ escreva "Consegui!"</div>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/github");
     editor.getSession().setMode("ace/mode/potigol");
-    editor.setShowPrintMargin(true);
+    editor.setShowPrintMargin(false);
+    editor.setHighlightActiveLine(false);
 </script>
 </body>
 </html>
