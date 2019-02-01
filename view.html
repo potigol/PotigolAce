@@ -31,7 +31,7 @@
    
 
   fetch('https://raw.githubusercontent.com/potigol/URI-Potigol/master/src/1001-1100/1001.poti')
-  .then(blob => {
+  .then(function(blob) {
     editor.setValue(blob.text());
   });
   //  editor.setShowPrintMargin(true);
