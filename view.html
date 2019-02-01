@@ -25,11 +25,16 @@
 <div id="editor"></div>
 <script src="src-min/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
-    document.getElementById("editor").innerHTML = "escreva 20";
+  document.getElementById("editor").innerHTML = "escreva 20";
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/potigol");
-    editor.setValue("escreva 10");
+   
+
+  fetch('https://raw.githubusercontent.com/potigol/URI-Potigol/master/src/1001-1100/1001.poti')
+  .then(blob => {
+    editor.setValue(blob);
+  });
   //  editor.setShowPrintMargin(true);
 </script>
 </body>
