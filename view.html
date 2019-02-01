@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
 <title>Potigol in Action</title>
 <script>
-const urlParams = new URLSearchParams(window.location.search);
-const file = urlParams.get('a');
+//const urlParams = new URLSearchParams(window.location.search);
+//const file = urlParams.get('a');
 document.getElementById("editor").innerHTML = file
 </script>
 <style type="text/css" media="screen">
@@ -46,6 +46,7 @@ escreva "Consegui!"</div>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/potigol");
+    editor.setText("klklka");
   //  editor.setShowPrintMargin(true);
 </script>
 </body>
